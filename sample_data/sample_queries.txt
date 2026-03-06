@@ -1,0 +1,60 @@
+# Sample Natural Language Queries for Testing
+
+## Basic Aggregations
+
+1. What is the total sales amount?
+2. How many orders were placed?
+3. What is the average order value?
+4. What is the maximum sales amount?
+5. What is the minimum sales amount?
+
+## Counting Queries
+
+6. How many unique customers are there?
+7. Count the number of transactions
+8. How many products were sold?
+9. How many unique product categories exist?
+
+## Grouping and Analysis
+
+10. What is the total sales by product category?
+11. Show me sales by region
+12. What is the average sales per customer?
+13. Total sales by payment method
+14. Count orders by region
+
+## Filtering and Comparison
+
+15. Which region has the highest sales?
+16. What is the most popular product category?
+17. Which payment method is used most?
+18. Show top 5 customers by sales
+
+## Specific Column Queries
+
+19. What is the average unit price?
+20. Total quantity sold
+21. How many orders used credit card?
+22. Average quantity per order
+
+## Date-based Queries (if applicable)
+
+23. How many orders in January?
+24. Total sales by month
+25. Orders per day
+
+## Complex Queries
+
+26. What is the average sales for Electronics category?
+27. How many customers bought Furniture?
+28. Total sales in the North region
+29. Count of orders above $500
+30. Average sales by product category
+
+## Tips for Best Results
+
+- Be specific about what you want to know
+- Mention column names if you know them
+- Use phrases like "total", "average", "count", "by category"
+- Simple queries work best
+- You can ask follow-up questions based on results

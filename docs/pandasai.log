@@ -1,0 +1,2484 @@
+2026-02-08 19:13:11 [INFO] Question: What is the average sales amount?
+2026-02-08 19:13:11 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:13:11 [INFO] Prompt ID: 4f910edb-e53e-4f62-a460-9f7e92e59055
+2026-02-08 19:13:11 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:13:11 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:13:12 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:13:12 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:13:12 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1035,Nancy Hernandez,Office Supplies,Side Table,3,399.99,599.99,West,2024-02-13,Cash
+1040,Deborah Cook,Furniture,USB Drive,12,39.99,249.9,North,2024-02-05,PayPal
+1028,Lisa Allen,Electronics,Cable Set,15,79.99,179.8,South,2024-02-21,Credit Card
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the average sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:13:12 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:13:12 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-02-08 19:13:12 [ERROR] Pipeline failed on step 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-02-08 19:16:29 [INFO] Question: What is the average sales amount?
+2026-02-08 19:16:29 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:16:29 [INFO] Prompt ID: a9b446d6-e7a4-4205-87fb-ae331a91f554
+2026-02-08 19:16:29 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:16:29 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:16:29 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:16:29 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:16:29 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1023,James Wilson,Electronics,Office Chair,1,899.99,699.99,North,2024-02-24,Credit Card
+1037,Margaret Evans,Office Supplies,Ottoman,8,599.99,194.85,West,2024-02-17,Debit Card
+1011,Betty Hill,Furniture,Highlighters,30,39.99,1999.95,South,2024-02-08,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the average sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:16:30 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:16:30 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-02-08 19:16:30 [ERROR] Pipeline failed on step 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-02-08 19:21:01 [INFO] Question: How many unique customers are there?
+2026-02-08 19:21:01 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:21:01 [INFO] Prompt ID: 001d35f8-48c8-48da-a7cb-3b54c882c996
+2026-02-08 19:21:01 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:21:01 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:21:01 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:21:01 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:21:01 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1004,David Lee,Office Supplies,Side Table,7,89.99,989.97,East,2024-02-23,Credit Card
+1010,Deborah Cook,Furniture,Router,18,7.99,899.97,West,2024-02-09,PayPal
+1028,Joseph Parker,Electronics,Speaker,3,25.99,89.7,South,2024-01-29,Debit Card
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many unique customers are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:21:01 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:21:02 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-02-08 19:21:02 [ERROR] Pipeline failed on step 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-02-08 19:22:21 [INFO] Question: What is the total sales amount?
+2026-02-08 19:22:21 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:22:21 [INFO] Prompt ID: 626c4e37-2ab0-4fe1-beb5-25bdc9fef3ab
+2026-02-08 19:22:21 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:22:21 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:22:21 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:22:21 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:22:21 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1032,Helen Sanchez,Office Supplies,Cable Set,30,7.99,419.88,South,2024-01-25,Debit Card
+1020,Lisa Allen,Furniture,Smartphone,40,9.99,1299.99,West,2024-02-15,PayPal
+1024,Steven Lopez,Electronics,Speaker,6,2.99,143.82,North,2024-02-19,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:22:21 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:22:21 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-02-08 19:22:21 [ERROR] Pipeline failed on step 3: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-02-08 19:24:01 [INFO] Question: How many orders were placed?
+2026-02-08 19:24:01 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:24:01 [INFO] Prompt ID: a7d2d3f2-c3da-4737-9612-91f825b134a0
+2026-02-08 19:24:01 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:24:01 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:24:01 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:24:01 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:24:01 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1039,Carol Carter,Electronics,Folders,10,399.99,419.88,West,2024-01-25,PayPal
+1027,Emma Johnson,Furniture,Office Chair,30,24.99,249.9,North,2024-01-27,Debit Card
+1037,Kevin Nelson,Office Supplies,Side Table,7,34.99,1799.98,East,2024-02-12,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many orders were placed?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:24:01 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:24:01 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-02-08 19:24:01 [ERROR] Pipeline failed on step 3: Error code: 400 - {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-02-08 19:26:59 [INFO] Question: How many orders were placed?
+2026-02-08 19:26:59 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:26:59 [INFO] Prompt ID: df2b72f2-9090-4376-bffd-c21a175c74ed
+2026-02-08 19:26:59 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:26:59 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:26:59 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:26:59 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:26:59 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1027,Michael Brown,Furniture,Router,5,899.99,479.96,West,2024-01-29,Debit Card
+1018,Susan Campbell,Office Supplies,USB Drive,10,2.99,899.97,East,2024-02-06,Cash
+1034,Charles Stewart,Electronics,Paper Pack,4,179.99,699.98,South,2024-02-16,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many orders were placed?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:26:59 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:27:00 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 19:27:00 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1027,Michael Brown,Furniture,Router,5,899.99,479.96,West,2024-01-29,Debit Card
+1018,Susan Campbell,Office Supplies,USB Drive,10,2.99,899.97,East,2024-02-06,Cash
+1034,Charles Stewart,Electronics,Paper Pack,4,179.99,699.98,South,2024-02-16,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many orders were placed?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-08 19:27:00 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Get the first dataframe from the list
+df = dfs[0]
+
+# Calculate the number of orders
+num_orders = df.shape[0]
+
+# Declare result var: 
+result = { "type": "number", "value": num_orders }
+
+# If you want to plot a chart, use the following code
+# plt.figure(figsize=(10,6))
+# plt.bar(df['Order_ID'], df['Quantity'])
+# plt.xlabel('Order ID')
+# plt.ylabel('Quantity')
+# plt.title('Orders')
+# plt.savefig('orders_plot.png')
+# result = { "type": "plot", "value": "orders_plot.png" }
+            ```
+            
+2026-02-08 19:27:00 [INFO] Executing Step 4: CachePopulation
+2026-02-08 19:27:00 [INFO] Executing Step 5: CodeCleaning
+2026-02-08 19:27:00 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\ai-business-analytics\exports\charts\temp_chart.png
+2026-02-08 19:27:00 [INFO] 
+Code running:
+```
+df = dfs[0]
+num_orders = df.shape[0]
+result = {'type': 'number', 'value': num_orders}
+        ```
+2026-02-08 19:27:00 [INFO] Executing Step 6: CodeExecution
+2026-02-08 19:27:00 [INFO] Executing Step 7: ResultValidation
+2026-02-08 19:27:00 [INFO] Answer: {'type': 'number', 'value': 40}
+2026-02-08 19:27:00 [INFO] Executing Step 8: ResultParsing
+2026-02-08 19:27:23 [INFO] Question: What is the total sales amount?
+2026-02-08 19:27:23 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:27:23 [INFO] Prompt ID: ea1b9ad7-4863-4803-9ff9-155e52160665
+2026-02-08 19:27:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:27:23 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:27:23 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:27:23 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:27:23 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1011,Karen Wright,Office Supplies,Docking Station,4,199.99,699.99,East,2024-02-16,Credit Card
+1021,David Lee,Furniture,Power Bank,40,349.99,104.85,South,2024-02-08,Cash
+1030,Helen Sanchez,Electronics,Smart Watch,3,149.99,399.75,West,2024-01-16,Debit Card
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:27:23 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:27:24 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 19:27:24 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1011,Karen Wright,Office Supplies,Docking Station,4,199.99,699.99,East,2024-02-16,Credit Card
+1021,David Lee,Furniture,Power Bank,40,349.99,104.85,South,2024-02-08,Cash
+1030,Helen Sanchez,Electronics,Smart Watch,3,149.99,399.75,West,2024-01-16,Debit Card
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-08 19:27:24 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to calculate total sales for the first dataframe
+total_sales = dfs[0]['Total_Sales'].sum()
+
+# Declare result var: 
+result = { "type": "number", "value": total_sales }
+
+# If you want to plot a chart, you can use the following code
+# plt.figure(figsize=(10,6))
+# plt.bar(dfs[0]['Product_Name'], dfs[0]['Total_Sales'])
+# plt.xlabel('Product Name')
+# plt.ylabel('Total Sales')
+# plt.title('Total Sales by Product')
+# plt.xticks(rotation=90)
+# plt.tight_layout()
+# plt.savefig('total_sales_plot.png')
+# result = { "type": "plot", "value": "total_sales_plot.png" }
+            ```
+            
+2026-02-08 19:27:24 [INFO] Executing Step 4: CachePopulation
+2026-02-08 19:27:24 [INFO] Executing Step 5: CodeCleaning
+2026-02-08 19:27:24 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\ai-business-analytics\exports\charts\temp_chart.png
+2026-02-08 19:27:24 [INFO] 
+Code running:
+```
+total_sales = dfs[0]['Total_Sales'].sum()
+result = {'type': 'number', 'value': total_sales}
+        ```
+2026-02-08 19:27:24 [INFO] Executing Step 6: CodeExecution
+2026-02-08 19:27:24 [INFO] Executing Step 7: ResultValidation
+2026-02-08 19:27:24 [INFO] Answer: {'type': 'number', 'value': 21901.41}
+2026-02-08 19:27:24 [INFO] Executing Step 8: ResultParsing
+2026-02-08 19:30:22 [INFO] Question: What is the total sales amount?
+2026-02-08 19:30:22 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 19:30:22 [INFO] Prompt ID: 4e318e98-b895-44d0-bedb-cf354868d6f1
+2026-02-08 19:30:22 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 19:30:22 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 19:30:22 [INFO] Executing Step 1: CacheLookup
+2026-02-08 19:30:22 [INFO] Executing Step 2: PromptGeneration
+2026-02-08 19:30:22 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1011,John Smith,Furniture,Folders,3,1299.99,1119.96,South,2024-02-11,PayPal
+1016,Jason Adams,Electronics,USB Drive,2,19.99,159.6,West,2024-01-26,Debit Card
+1013,Linda Martinez,Office Supplies,Tape Dispenser,8,699.99,399.75,East,2024-01-20,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-08 19:30:22 [INFO] Executing Step 3: CodeGenerator
+2026-02-08 19:30:22 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 19:30:22 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1011,John Smith,Furniture,Folders,3,1299.99,1119.96,South,2024-02-11,PayPal
+1016,Jason Adams,Electronics,USB Drive,2,19.99,159.6,West,2024-01-26,Debit Card
+1013,Linda Martinez,Office Supplies,Tape Dispenser,8,699.99,399.75,East,2024-01-20,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-08 19:30:22 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to calculate total sales for the first dataframe
+total_sales = dfs[0]['Total_Sales'].sum()
+
+# Declare result var: 
+result = { "type": "number", "value": total_sales }
+
+# If you want to plot a chart, you can use the following code
+# plt.figure(figsize=(10,6))
+# plt.bar(dfs[0]['Product_Name'], dfs[0]['Total_Sales'])
+# plt.xlabel('Product Name')
+# plt.ylabel('Total Sales')
+# plt.title('Total Sales by Product')
+# plt.savefig('total_sales_plot.png')
+# result = { "type": "plot", "value": "total_sales_plot.png" }
+            ```
+            
+2026-02-08 19:30:22 [INFO] Executing Step 4: CachePopulation
+2026-02-08 19:30:22 [INFO] Executing Step 5: CodeCleaning
+2026-02-08 19:30:22 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\ai-business-analytics\exports\charts\temp_chart.png
+2026-02-08 19:30:22 [INFO] 
+Code running:
+```
+total_sales = dfs[0]['Total_Sales'].sum()
+result = {'type': 'number', 'value': total_sales}
+        ```
+2026-02-08 19:30:22 [INFO] Executing Step 6: CodeExecution
+2026-02-08 19:30:22 [INFO] Executing Step 7: ResultValidation
+2026-02-08 19:30:22 [INFO] Answer: {'type': 'number', 'value': 21901.41}
+2026-02-08 19:30:22 [INFO] Executing Step 8: ResultParsing
+2026-02-08 23:57:57 [INFO] Question: What is the total sales amount?
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\pandasai\\helpers\\logger.py', reloading
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\pandasai\\agent\\base.py', reloading
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\pandasai\\smart_dataframe\\__init__.py', reloading
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\flask\\app.py', reloading
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+2026-02-08 23:58:00 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-08 23:58:00 [INFO] Prompt ID: 2f6d777e-be78-4850-8eeb-08924f88ff12
+2026-02-08 23:58:00 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\pandasai\\pipelines\\chat\\generate_chat_pipeline.py', reloading
+2026-02-08 23:58:00 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-08 23:58:00 [INFO]  * Detected change in 'C:\\Users\\kpras\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\pandasai\\pipelines\\pipeline.py', reloading
+2026-02-08 23:58:00 [INFO] Executing Step 1: CacheLookup
+2026-02-08 23:58:00 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 00:00:31 [INFO] Question: What is the total sales amount?
+2026-02-09 00:00:33 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 00:00:33 [INFO] Prompt ID: 489e148f-4f06-4fde-b9e2-0a50d3527016
+2026-02-09 00:00:33 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 00:00:33 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 00:00:33 [INFO] Executing Step 1: CacheLookup
+2026-02-09 00:00:33 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 00:00:33 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1011,Patricia Rodriguez,Office Supplies,Office Chair,7,699.99,249.95,East,2024-02-01,Cash
+1026,Kenneth Phillips,Furniture,Laptop,3,79.99,479.96,West,2024-02-17,Debit Card
+1018,Dorothy Turner,Electronics,Folders,2,349.99,699.99,South,2024-02-04,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 00:00:33 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 00:00:34 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 00:00:34 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1011,Patricia Rodriguez,Office Supplies,Office Chair,7,699.99,249.95,East,2024-02-01,Cash
+1026,Kenneth Phillips,Furniture,Laptop,3,79.99,479.96,West,2024-02-17,Debit Card
+1018,Dorothy Turner,Electronics,Folders,2,349.99,699.99,South,2024-02-04,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 00:00:34 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+# Calculate the total sales amount
+total_sales = dfs[0]['Total_Sales'].sum()
+
+# Declare result var: 
+result = {
+    "type": "number", 
+    "value": total_sales
+}
+            ```
+            
+2026-02-09 00:00:34 [INFO] Executing Step 4: CachePopulation
+2026-02-09 00:00:34 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 00:00:34 [INFO] 
+Code running:
+```
+total_sales = dfs[0]['Total_Sales'].sum()
+result = {'type': 'number', 'value': total_sales}
+        ```
+2026-02-09 00:00:34 [INFO] Executing Step 6: CodeExecution
+2026-02-09 00:00:34 [INFO] Executing Step 7: ResultValidation
+2026-02-09 00:00:34 [INFO] Answer: {'type': 'number', 'value': 21901.41}
+2026-02-09 00:00:34 [INFO] Executing Step 8: ResultParsing
+2026-02-09 00:00:34 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:34] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 00:00:34 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:34] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 00:00:34 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:34] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:00:38 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:38] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 00:00:38 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:38] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:00:59 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:59] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 00:00:59 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:59] "[35m[1mGET /?step=visualize HTTP/1.1[0m" 500 -
+2026-02-09 00:00:59 [INFO] 127.0.0.1 - - [09/Feb/2026 00:00:59] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-02-09 00:01:00 [INFO] 127.0.0.1 - - [09/Feb/2026 00:01:00] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-02-09 00:01:00 [INFO] 127.0.0.1 - - [09/Feb/2026 00:01:00] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-02-09 00:01:00 [INFO] 127.0.0.1 - - [09/Feb/2026 00:01:00] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-02-09 00:03:29 [INFO] Question: What is the total sales amount?
+2026-02-09 00:03:31 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 00:03:31 [INFO] Prompt ID: e821d715-aab8-4b04-977e-06775b52e9ed
+2026-02-09 00:03:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 00:03:31 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 00:03:31 [INFO] Executing Step 1: CacheLookup
+2026-02-09 00:03:31 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 00:03:31 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1024,George Roberts,Office Supplies,Headphones,15,129.99,479.94,West,2024-02-20,Cash
+1004,Kevin Nelson,Furniture,USB Drive,12,29.99,719.92,North,2024-02-03,Credit Card
+1030,Kenneth Phillips,Electronics,Mouse,6,7.99,399.8,South,2024-02-13,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 00:03:31 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 00:03:32 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 00:03:32 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1024,George Roberts,Office Supplies,Headphones,15,129.99,479.94,West,2024-02-20,Cash
+1004,Kevin Nelson,Furniture,USB Drive,12,29.99,719.92,North,2024-02-03,Credit Card
+1030,Kenneth Phillips,Electronics,Mouse,6,7.99,399.8,South,2024-02-13,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the total sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 00:03:32 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to calculate total sales for the first dataframe
+df = dfs[0]
+total_sales = df['Total_Sales'].sum()
+
+# Declare result var: 
+result = { "type": "number", "value": total_sales }
+
+# If you want to plot a chart, you can use the following code
+# plt.figure(figsize=(10,6))
+# plt.bar(df['Product_Name'], df['Total_Sales'])
+# plt.xlabel('Product Name')
+# plt.ylabel('Total Sales')
+# plt.title('Total Sales by Product')
+# plt.savefig('total_sales_plot.png')
+# result = { "type": "plot", "value": "total_sales_plot.png" }
+            ```
+            
+2026-02-09 00:03:32 [INFO] Executing Step 4: CachePopulation
+2026-02-09 00:03:32 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 00:03:32 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 00:03:33 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_sales = df['Total_Sales'].sum()
+result = {'type': 'number', 'value': total_sales}
+        ```
+2026-02-09 00:03:33 [INFO] Executing Step 6: CodeExecution
+2026-02-09 00:03:33 [INFO] Executing Step 7: ResultValidation
+2026-02-09 00:03:33 [INFO] Answer: {'type': 'number', 'value': 21901.41}
+2026-02-09 00:03:33 [INFO] Executing Step 8: ResultParsing
+2026-02-09 00:03:33 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:33] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 00:03:33 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:33] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 00:03:33 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:33] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:03:37 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:37] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 00:03:37 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:37] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:03:43 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:43] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 00:03:43 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:43] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 00:03:43 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:43] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:03:48 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:48] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 00:03:48 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:48] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:03:55 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:55] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-09 00:03:55 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:55] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 00:03:55 [INFO] 127.0.0.1 - - [09/Feb/2026 00:03:55] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 00:04:06 [INFO] 127.0.0.1 - - [09/Feb/2026 00:04:06] "GET /api/reports/analysis_report_20260209_000351.pdf HTTP/1.1" 200 -
+2026-02-09 07:36:09 [INFO] Question: What is the maximum sales amount?
+2026-02-09 07:36:12 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 07:36:12 [INFO] Prompt ID: 311fceab-ec7f-4dd8-818d-437acdfc2674
+2026-02-09 07:36:12 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 07:36:12 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 07:36:12 [INFO] Executing Step 1: CacheLookup
+2026-02-09 07:36:12 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 07:36:12 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1018,Timothy Morris,Furniture,Scissors,6,7.99,899.98,North,2024-02-01,PayPal
+1030,Jason Adams,Office Supplies,Stapler,8,149.99,249.95,West,2024-02-17,Credit Card
+1038,Matthew King,Electronics,Desk,15,6.99,1999.95,South,2024-01-30,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the maximum sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 07:36:12 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 07:36:13 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 07:36:13 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1018,Timothy Morris,Furniture,Scissors,6,7.99,899.98,North,2024-02-01,PayPal
+1030,Jason Adams,Office Supplies,Stapler,8,149.99,249.95,West,2024-02-17,Credit Card
+1038,Matthew King,Electronics,Desk,15,6.99,1999.95,South,2024-01-30,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the maximum sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 07:36:13 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to find the maximum sales amount across all dataframes
+max_sales = max(df['Total_Sales'].max() for df in dfs)
+
+# Declare result var: 
+result = { "type": "number", "value": max_sales }
+
+# If you want to plot a chart of the sales amounts
+# plt.figure(figsize=(10,6))
+# for i, df in enumerate(dfs):
+#     plt.plot(df['Total_Sales'], label=f'Dataframe {i}')
+# plt.xlabel('Index')
+# plt.ylabel('Sales Amount')
+# plt.title('Sales Amounts Across Dataframes')
+# plt.legend()
+# plt.savefig('sales_amounts.png')
+# result = { "type": "plot", "value": "sales_amounts.png" }
+            ```
+            
+2026-02-09 07:36:13 [INFO] Executing Step 4: CachePopulation
+2026-02-09 07:36:13 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 07:36:13 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 07:36:13 [INFO] 
+Code running:
+```
+max_sales = max(df['Total_Sales'].max() for df in dfs)
+result = {'type': 'number', 'value': max_sales}
+        ```
+2026-02-09 07:36:13 [INFO] Executing Step 6: CodeExecution
+2026-02-09 07:36:13 [INFO] Executing Step 7: ResultValidation
+2026-02-09 07:36:13 [INFO] Answer: {'type': 'number', 'value': 1999.95}
+2026-02-09 07:36:13 [INFO] Executing Step 8: ResultParsing
+2026-02-09 07:36:13 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:13] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 07:36:13 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:13] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 07:36:13 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:13] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:36:19 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:19] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 07:36:19 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:19] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:36:29 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:29] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 07:36:29 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:29] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 07:36:29 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:29] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:36:37 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:37] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 07:36:37 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:37] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:36:45 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:45] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-09 07:36:45 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:45] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 07:36:45 [INFO] 127.0.0.1 - - [09/Feb/2026 07:36:45] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:38:44 [INFO] 127.0.0.1 - - [09/Feb/2026 07:38:44] "[32mPOST /session/reset HTTP/1.1[0m" 302 -
+2026-02-09 07:38:44 [INFO] 127.0.0.1 - - [09/Feb/2026 07:38:44] "GET / HTTP/1.1" 200 -
+2026-02-09 07:38:44 [INFO] 127.0.0.1 - - [09/Feb/2026 07:38:44] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:38:55 [INFO] 127.0.0.1 - - [09/Feb/2026 07:38:55] "[32mPOST /upload HTTP/1.1[0m" 302 -
+2026-02-09 07:38:55 [INFO] 127.0.0.1 - - [09/Feb/2026 07:38:55] "GET /?step=upload HTTP/1.1" 200 -
+2026-02-09 07:38:55 [INFO] 127.0.0.1 - - [09/Feb/2026 07:38:55] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:39:02 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:02] "GET /?step=clean HTTP/1.1" 200 -
+2026-02-09 07:39:02 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:02] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:39:05 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:05] "[32mPOST /clean HTTP/1.1[0m" 302 -
+2026-02-09 07:39:05 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:05] "GET /?step=clean HTTP/1.1" 200 -
+2026-02-09 07:39:05 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:05] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:39:12 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:12] "[32mPOST /clean HTTP/1.1[0m" 302 -
+2026-02-09 07:39:12 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:12] "GET /?step=clean HTTP/1.1" 200 -
+2026-02-09 07:39:12 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:12] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:39:14 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:14] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 07:39:14 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:14] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:39:58 [INFO] Question: how many applicants are there?
+2026-02-09 07:39:58 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 07:39:58 [INFO] Prompt ID: 21bd242f-a4c8-4a52-b7ff-3b3795479374
+2026-02-09 07:39:58 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 07:39:58 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 07:39:58 [INFO] Executing Step 1: CacheLookup
+2026-02-09 07:39:58 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 07:39:58 [INFO] Using prompt: <dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+353,44,Female,Married,84047,45586,509,4,4,Unemployed,0
+737,24,Female,Single,98279,5389,436,3,0,Employed,1
+201,27,Male,Divorced,115804,29087,391,1,3,Self-employed,0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ how many applicants are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 07:39:58 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 07:39:59 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 07:39:59 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+353,44,Female,Married,84047,45586,509,4,4,Unemployed,0
+737,24,Female,Single,98279,5389,436,3,0,Employed,1
+201,27,Male,Divorced,115804,29087,391,1,3,Self-employed,0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ how many applicants are there?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 07:39:59 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+# Get the number of applicants
+num_applicants = len(dfs[0])
+
+# Declare result var: 
+result = {
+    "type": "number", 
+    "value": num_applicants
+}
+            ```
+            
+2026-02-09 07:39:59 [INFO] Executing Step 4: CachePopulation
+2026-02-09 07:39:59 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 07:39:59 [INFO] 
+Code running:
+```
+num_applicants = len(dfs[0])
+result = {'type': 'number', 'value': num_applicants}
+        ```
+2026-02-09 07:39:59 [INFO] Executing Step 6: CodeExecution
+2026-02-09 07:39:59 [INFO] Executing Step 7: ResultValidation
+2026-02-09 07:39:59 [INFO] Answer: {'type': 'number', 'value': 1000}
+2026-02-09 07:39:59 [INFO] Executing Step 8: ResultParsing
+2026-02-09 07:39:59 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:59] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 07:39:59 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:59] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 07:39:59 [INFO] 127.0.0.1 - - [09/Feb/2026 07:39:59] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:40:31 [INFO] Question: what is the average age of total applicants?
+2026-02-09 07:40:31 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 07:40:31 [INFO] Prompt ID: 99548d68-b5c2-441d-8b8f-a66399f6f51f
+2026-02-09 07:40:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 07:40:31 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 07:40:31 [INFO] Executing Step 1: CacheLookup
+2026-02-09 07:40:31 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 07:40:31 [INFO] Using prompt: <dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+999,40,Female,Single,54610,26162,510,0,3,Unemployed,1
+291,26,Male,Divorced,139028,26625,444,1,0,Employed,0
+193,48,Male,Married,98931,20906,840,4,2,Self-employed,1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is the average age of total applicants?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 07:40:31 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 07:40:32 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 07:40:32 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+999,40,Female,Single,54610,26162,510,0,3,Unemployed,1
+291,26,Male,Divorced,139028,26625,444,1,0,Employed,0
+193,48,Male,Married,98931,20906,840,4,2,Self-employed,1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is the average age of total applicants?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 07:40:32 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Calculate the average age of total applicants
+average_age = dfs[0]['age'].mean()
+
+# Declare result var: 
+result = {
+    "type": "number", 
+    "value": average_age
+}
+
+# If you want to plot a histogram of ages
+# plt.hist(dfs[0]['age'], bins=10)
+# plt.title('Distribution of Ages')
+# plt.xlabel('Age')
+# plt.ylabel('Frequency')
+# plt.savefig('age_distribution.png')
+# plt.close()
+
+# In that case, declare result var as:
+# result = {
+#     "type": "plot", 
+#     "value": "age_distribution.png"
+# }
+            ```
+            
+2026-02-09 07:40:32 [INFO] Executing Step 4: CachePopulation
+2026-02-09 07:40:32 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 07:40:32 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 07:40:32 [INFO] 
+Code running:
+```
+average_age = dfs[0]['age'].mean()
+result = {'type': 'number', 'value': average_age}
+        ```
+2026-02-09 07:40:32 [INFO] Executing Step 6: CodeExecution
+2026-02-09 07:40:32 [INFO] Executing Step 7: ResultValidation
+2026-02-09 07:40:32 [INFO] Answer: {'type': 'number', 'value': 42.515}
+2026-02-09 07:40:32 [INFO] Executing Step 8: ResultParsing
+2026-02-09 07:40:32 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:32] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 07:40:32 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:32] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 07:40:32 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:32] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:40:36 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:36] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 07:40:36 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:36] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:40:40 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:40] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 07:40:40 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:40] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 07:40:40 [INFO] 127.0.0.1 - - [09/Feb/2026 07:40:40] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:41:15 [INFO] 127.0.0.1 - - [09/Feb/2026 07:41:15] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 07:41:15 [INFO] 127.0.0.1 - - [09/Feb/2026 07:41:15] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:41:26 [INFO] 127.0.0.1 - - [09/Feb/2026 07:41:26] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-09 07:41:26 [INFO] 127.0.0.1 - - [09/Feb/2026 07:41:26] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 07:41:26 [INFO] 127.0.0.1 - - [09/Feb/2026 07:41:26] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:41:30 [INFO] 127.0.0.1 - - [09/Feb/2026 07:41:30] "GET /api/reports/analysis_report_20260209_074119.pdf HTTP/1.1" 200 -
+2026-02-09 07:47:26 [INFO] Question: what is the average age of applicants?
+2026-02-09 07:47:28 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 07:47:28 [INFO] Prompt ID: 27173c31-9536-4d6f-abcb-f6745f2c0ec9
+2026-02-09 07:47:28 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 07:47:28 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 07:47:28 [INFO] Executing Step 1: CacheLookup
+2026-02-09 07:47:28 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 07:47:28 [INFO] Using prompt: <dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+246,56,Female,Married,29587,44382,390,3,4,Unemployed,1
+1000,31,Male,Single,38474,5406,422,2,1,Employed,0
+647,60,Female,Divorced,39446,37272,494,4,0,Self-employed,0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is the average age of applicants?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 07:47:28 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 07:47:29 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 07:47:29 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+246,56,Female,Married,29587,44382,390,3,4,Unemployed,1
+1000,31,Male,Single,38474,5406,422,2,1,Employed,0
+647,60,Female,Divorced,39446,37272,494,4,0,Self-employed,0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is the average age of applicants?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 07:47:29 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Calculate the average age of applicants
+average_age = dfs[0]['age'].mean()
+
+# Declare result var: 
+result = {
+    "type": "number", 
+    "value": average_age
+}
+
+# If you want to plot a histogram of ages
+# plt.hist(dfs[0]['age'], bins=10)
+# plt.title('Distribution of Ages')
+# plt.xlabel('Age')
+# plt.ylabel('Frequency')
+# plt.savefig('age_distribution.png')
+# plt.close()
+
+# In this case, the result would be:
+# result = {
+#     "type": "plot", 
+#     "value": "age_distribution.png"
+# }
+            ```
+            
+2026-02-09 07:47:29 [INFO] Executing Step 4: CachePopulation
+2026-02-09 07:47:29 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 07:47:29 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 07:47:29 [INFO] 
+Code running:
+```
+average_age = dfs[0]['age'].mean()
+result = {'type': 'number', 'value': average_age}
+        ```
+2026-02-09 07:47:29 [INFO] Executing Step 6: CodeExecution
+2026-02-09 07:47:29 [INFO] Executing Step 7: ResultValidation
+2026-02-09 07:47:29 [INFO] Answer: {'type': 'number', 'value': 42.515}
+2026-02-09 07:47:29 [INFO] Executing Step 8: ResultParsing
+2026-02-09 07:47:29 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:29] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 07:47:29 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:29] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 07:47:29 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:29] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:47:33 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:33] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 07:47:33 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:33] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:47:37 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:37] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 07:47:37 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:37] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 07:47:37 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:37] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:47:44 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:44] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 07:47:44 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:44] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:47:48 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:48] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-09 07:47:48 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:48] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 07:47:48 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:48] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 07:47:51 [INFO] 127.0.0.1 - - [09/Feb/2026 07:47:51] "GET /api/reports/analysis_report_20260209_074747.pdf HTTP/1.1" 200 -
+2026-02-09 07:48:20 [INFO] 127.0.0.1 - - [09/Feb/2026 07:48:20] "[32mPOST /session/reset HTTP/1.1[0m" 302 -
+2026-02-09 07:48:20 [INFO] 127.0.0.1 - - [09/Feb/2026 07:48:20] "GET / HTTP/1.1" 200 -
+2026-02-09 07:48:20 [INFO] 127.0.0.1 - - [09/Feb/2026 07:48:20] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 08:46:34 [INFO] Question: what is the average age of applicants?
+2026-02-09 08:46:39 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 08:46:39 [INFO] Prompt ID: 3c86f67c-6c7d-4a93-a940-c466f0608d63
+2026-02-09 08:46:39 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 08:46:39 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 08:46:39 [INFO] Executing Step 1: CacheLookup
+2026-02-09 08:46:39 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 08:46:39 [INFO] Using prompt: <dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+424,47,Male,Divorced,48669,35750,446,3,4,Self-employed,0
+769,56,Female,Single,66571,31485,769,4,0,Unemployed,1
+524,44,Female,Married,29283,15179,767,0,2,Employed,1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is the average age of applicants?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 08:46:39 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 08:46:40 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 08:46:40 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:1000x11
+applicant_id,age,gender,marital_status,annual_income,loan_amount,credit_score,num_dependents,existing_loans_count,employment_status,loan_approved
+424,47,Male,Divorced,48669,35750,446,3,4,Self-employed,0
+769,56,Female,Single,66571,31485,769,4,0,Unemployed,1
+524,44,Female,Married,29283,15179,767,0,2,Employed,1
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ what is the average age of applicants?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 08:46:40 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Calculate the average age of applicants
+average_age = dfs[0]['age'].mean()
+
+# Declare result var: 
+result = {
+    "type": "number", 
+    "value": average_age
+}
+
+# If you want to plot a histogram of ages
+# plt.hist(dfs[0]['age'], bins=10)
+# plt.title('Distribution of Ages')
+# plt.xlabel('Age')
+# plt.ylabel('Frequency')
+# plt.savefig('age_distribution.png')
+# plt.close()
+
+# In that case, the result would be:
+# result = {
+#     "type": "plot", 
+#     "value": "age_distribution.png"
+# }
+            ```
+            
+2026-02-09 08:46:40 [INFO] Executing Step 4: CachePopulation
+2026-02-09 08:46:40 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 08:46:40 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 08:46:40 [INFO] 
+Code running:
+```
+average_age = dfs[0]['age'].mean()
+result = {'type': 'number', 'value': average_age}
+        ```
+2026-02-09 08:46:41 [INFO] Executing Step 6: CodeExecution
+2026-02-09 08:46:41 [INFO] Executing Step 7: ResultValidation
+2026-02-09 08:46:41 [INFO] Answer: {'type': 'number', 'value': 42.515}
+2026-02-09 08:46:41 [INFO] Executing Step 8: ResultParsing
+2026-02-09 08:46:41 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:41] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 08:46:41 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:41] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 08:46:41 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:41] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 08:46:48 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:48] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 08:46:48 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:48] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 08:46:57 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:57] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 08:46:57 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:57] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 08:46:57 [INFO] 127.0.0.1 - - [09/Feb/2026 08:46:57] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 08:47:08 [INFO] 127.0.0.1 - - [09/Feb/2026 08:47:08] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 08:47:08 [INFO] 127.0.0.1 - - [09/Feb/2026 08:47:08] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 08:47:12 [INFO] 127.0.0.1 - - [09/Feb/2026 08:47:12] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-09 08:47:12 [INFO] 127.0.0.1 - - [09/Feb/2026 08:47:12] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 08:47:12 [INFO] 127.0.0.1 - - [09/Feb/2026 08:47:12] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 08:47:16 [INFO] 127.0.0.1 - - [09/Feb/2026 08:47:16] "GET /api/reports/analysis_report_20260209_084711.pdf HTTP/1.1" 200 -
+2026-02-09 08:48:07 [INFO] 127.0.0.1 - - [09/Feb/2026 08:48:07] "[32mPOST /session/reset HTTP/1.1[0m" 302 -
+2026-02-09 08:48:07 [INFO] 127.0.0.1 - - [09/Feb/2026 08:48:07] "GET / HTTP/1.1" 200 -
+2026-02-09 08:48:07 [INFO] 127.0.0.1 - - [09/Feb/2026 08:48:07] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:22:42 [INFO] Question: show total revenur by region
+2026-02-09 22:22:47 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 22:22:47 [INFO] Prompt ID: c423c95e-171c-45df-bc8b-2d2f11b8b63f
+2026-02-09 22:22:47 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 22:22:47 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 22:22:47 [INFO] Executing Step 1: CacheLookup
+2026-02-09 22:22:47 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 22:22:47 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show total revenur by region
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 22:22:47 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 22:22:48 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 22:22:48 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show total revenur by region
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 22:22:48 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to calculate total revenue by region for the first dataframe
+df = dfs[0]
+
+# Calculate total revenue by region
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+
+# Print the result
+print(total_revenue_by_region)
+
+# Save the result as a plot
+plt.figure(figsize=(10,6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.savefig('total_revenue_by_region.png')
+
+# Declare result var: 
+result = {
+    "type": "plot", 
+    "value": "total_revenue_by_region.png"
+}
+            ```
+            
+2026-02-09 22:22:48 [INFO] Executing Step 4: CachePopulation
+2026-02-09 22:22:48 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 22:22:48 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 22:22:48 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.savefig('C:/Users/kpras/OneDrive/Desktop/Stem Ramesh/Mini Project/MINI2/mini/project/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/kpras/OneDrive/Desktop/Stem Ramesh/Mini Project/MINI2/mini/project/exports/charts/temp_chart.png'}
+        ```
+2026-02-09 22:22:48 [INFO] Executing Step 6: CodeExecution
+2026-02-09 22:22:49 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+2026-02-09 22:22:49 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2026-02-09 22:22:49 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2026-02-09 22:22:49 [INFO] Executing Step 0: ErrorPromptGeneration
+2026-02-09 22:22:49 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ show total revenur by region
+
+You generated this python code:
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.savefig('C:/Users/kpras/OneDrive/Desktop/Stem Ramesh/Mini Project/MINI2/mini/project/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/kpras/OneDrive/Desktop/Stem Ramesh/Mini Project/MINI2/mini/project/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+2026-02-09 22:22:49 [INFO] Executing Step 1: CodeGenerator
+2026-02-09 22:22:50 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 22:22:50 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ show total revenur by region
+
+You generated this python code:
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.savefig('C:/Users/kpras/OneDrive/Desktop/Stem Ramesh/Mini Project/MINI2/mini/project/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/kpras/OneDrive/Desktop/Stem Ramesh/Mini Project/MINI2/mini/project/exports/charts/temp_chart.png'}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 97, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value type <class 'str'> must match with type plot
+
+
+Fix the python code above and return the new python code:
+            
+2026-02-09 22:22:50 [INFO] Code generated:
+            ```
+            import matplotlib.pyplot as plt
+
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+            ```
+            
+2026-02-09 22:22:50 [INFO] Executing Step 2: CodeCleaning
+2026-02-09 22:22:50 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+        ```
+2026-02-09 22:22:50 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2026-02-09 22:22:50 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2026-02-09 22:22:50 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2026-02-09 22:22:50 [INFO] Executing Step 0: ErrorPromptGeneration
+2026-02-09 22:22:51 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ show total revenur by region
+
+You generated this python code:
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2026-02-09 22:22:51 [INFO] Executing Step 1: CodeGenerator
+2026-02-09 22:22:52 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 22:22:52 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ show total revenur by region
+
+You generated this python code:
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2026-02-09 22:22:52 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of dataframes
+df = dfs[0]
+
+# Calculate total revenue by region
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+
+# Print the result
+print(total_revenue_by_region)
+
+# Plot the result
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+            ```
+            
+2026-02-09 22:22:52 [INFO] Executing Step 2: CodeCleaning
+2026-02-09 22:22:52 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+        ```
+2026-02-09 22:22:52 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+2026-02-09 22:22:52 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2026-02-09 22:22:52 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2026-02-09 22:22:52 [INFO] Executing Step 0: ErrorPromptGeneration
+2026-02-09 22:22:52 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ show total revenur by region
+
+You generated this python code:
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+2026-02-09 22:22:52 [INFO] Executing Step 1: CodeGenerator
+2026-02-09 22:22:53 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 22:22:53 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1012,Brian Mitchell,Furniture,Side Table,1,3.99,1999.95,West,2024-02-22,Credit Card
+1018,Susan Campbell,Electronics,Smart Watch,18,8.99,719.92,East,2024-02-01,Cash
+1009,Sandra Green,Office Supplies,Tape Dispenser,40,129.99,1299.99,North,2024-02-15,PayPal
+</dataframe>
+
+
+The user asked the following question:
+### QUERY
+ show total revenur by region
+
+You generated this python code:
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+plt.figure(figsize=(10, 6))
+plt.bar(total_revenue_by_region['Region'], total_revenue_by_region['Total_Sales'])
+plt.xlabel('Region')
+plt.ylabel('Total Revenue')
+plt.title('Total Revenue by Region')
+plt.show()
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 85, in execute
+    result = self.execute_code(code_to_run, code_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 175, in execute_code
+    raise NoResultFoundError("No result returned")
+pandasai.exceptions.NoResultFoundError: No result returned
+
+
+Fix the python code above and return the new python code:
+            
+2026-02-09 22:22:53 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of dataframes
+df = dfs[0]
+
+# Group by Region and calculate the sum of Total_Sales
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+
+# Print the result
+print(total_revenue_by_region)
+
+# Since we can't display plots, we'll just return the result
+result = total_revenue_by_region.to_dict(orient='records')
+print(result)
+            ```
+            
+2026-02-09 22:22:53 [INFO] Executing Step 2: CodeCleaning
+2026-02-09 22:22:53 [INFO] 
+Code running:
+```
+df = dfs[0]
+total_revenue_by_region = df.groupby('Region')['Total_Sales'].sum().reset_index()
+print(total_revenue_by_region)
+result = total_revenue_by_region.to_dict(orient='records')
+print(result)
+        ```
+2026-02-09 22:22:53 [ERROR] Failed with error: Traceback (most recent call last):
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\pipelines\chat\code_execution.py", line 96, in execute
+    if not OutputValidator.validate_result(result):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kpras\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pandasai\helpers\output_validator.py", line 73, in validate_result
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Result must be in the format of dictionary of type and value
+
+2026-02-09 22:22:53 [ERROR] Pipeline failed on step 6: Result must be in the format of dictionary of type and value
+2026-02-09 22:22:53 [INFO] 127.0.0.1 - - [09/Feb/2026 22:22:53] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 22:22:53 [INFO] 127.0.0.1 - - [09/Feb/2026 22:22:53] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 22:22:53 [INFO] 127.0.0.1 - - [09/Feb/2026 22:22:53] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:22:53 [INFO] 127.0.0.1 - - [09/Feb/2026 22:22:53] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:23:18 [INFO] Question: What is the maximum sales amount?
+2026-02-09 22:23:18 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 22:23:18 [INFO] Prompt ID: 1a98b440-d636-4964-a211-198a6ee0ae92
+2026-02-09 22:23:18 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 22:23:18 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 22:23:18 [INFO] Executing Step 1: CacheLookup
+2026-02-09 22:23:18 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 22:23:18 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1030,Robert Garcia,Electronics,Filing Cabinet,8,79.99,399.98,East,2024-01-21,PayPal
+1023,John Smith,Office Supplies,Office Chair,12,279.99,399.75,North,2024-02-18,Debit Card
+1009,Sandra Green,Furniture,Smart Watch,30,19.99,539.97,West,2024-02-24,Credit Card
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the maximum sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 22:23:18 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 22:23:19 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 22:23:19 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1030,Robert Garcia,Electronics,Filing Cabinet,8,79.99,399.98,East,2024-01-21,PayPal
+1023,John Smith,Office Supplies,Office Chair,12,279.99,399.75,North,2024-02-18,Debit Card
+1009,Sandra Green,Furniture,Smart Watch,30,19.99,539.97,West,2024-02-24,Credit Card
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the maximum sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 22:23:19 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to find the maximum sales amount across all dataframes
+max_sales = max(df['Total_Sales'].max() for df in dfs)
+
+# Declare result var: 
+result = { "type": "number", "value": max_sales }
+
+# If you want to plot a chart, you can use the following code
+# plt.figure(figsize=(10,6))
+# plt.bar(dfs[0]['Product_Name'], dfs[0]['Total_Sales'])
+# plt.xlabel('Product Name')
+# plt.ylabel('Total Sales')
+# plt.title('Total Sales by Product')
+# plt.savefig('total_sales_by_product.png')
+# result = { "type": "plot", "value": "total_sales_by_product.png" }
+            ```
+            
+2026-02-09 22:23:19 [INFO] Executing Step 4: CachePopulation
+2026-02-09 22:23:19 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 22:23:19 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 22:23:19 [INFO] 
+Code running:
+```
+max_sales = max(df['Total_Sales'].max() for df in dfs)
+result = {'type': 'number', 'value': max_sales}
+        ```
+2026-02-09 22:23:19 [INFO] Executing Step 6: CodeExecution
+2026-02-09 22:23:19 [INFO] Executing Step 7: ResultValidation
+2026-02-09 22:23:19 [INFO] Answer: {'type': 'number', 'value': 1999.95}
+2026-02-09 22:23:19 [INFO] Executing Step 8: ResultParsing
+2026-02-09 22:23:19 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:19] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 22:23:19 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:19] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 22:23:19 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:19] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:23:19 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:19] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:23:24 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:24] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 22:23:24 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:24] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:23:24 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:24] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:23:28 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:28] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 22:23:28 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:28] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:23:28 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:28] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:23:50 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:50] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 22:23:50 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:50] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:23:50 [INFO] 127.0.0.1 - - [09/Feb/2026 22:23:50] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:28:26 [INFO] Question: What is the maximum sales amount?
+2026-02-09 22:28:30 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-09 22:28:30 [INFO] Prompt ID: 2f60f5d8-1ec1-4bc5-bbf8-0d0e3466c11a
+2026-02-09 22:28:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-09 22:28:30 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-09 22:28:30 [INFO] Executing Step 1: CacheLookup
+2026-02-09 22:28:30 [INFO] Executing Step 2: PromptGeneration
+2026-02-09 22:28:30 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1036,Carol Carter,Furniture,Docking Station,5,8.99,367.92,North,2024-01-25,Debit Card
+1029,Karen Wright,Electronics,Binders,10,149.99,479.94,South,2024-02-08,PayPal
+1005,Matthew King,Office Supplies,Headphones,15,19.99,299.98,East,2024-02-23,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the maximum sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-09 22:28:30 [INFO] Executing Step 3: CodeGenerator
+2026-02-09 22:28:32 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-09 22:28:32 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1036,Carol Carter,Furniture,Docking Station,5,8.99,367.92,North,2024-01-25,Debit Card
+1029,Karen Wright,Electronics,Binders,10,149.99,479.94,South,2024-02-08,PayPal
+1005,Matthew King,Office Supplies,Headphones,15,19.99,299.98,East,2024-02-23,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ What is the maximum sales amount?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-09 22:28:32 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+# Assuming dfs is a list of dataframes and we want to find the maximum sales amount across all dataframes
+max_sales = max(df['Total_Sales'].max() for df in dfs)
+
+# Declare result var: 
+result = { "type": "number", "value": max_sales }
+
+# If you want to plot a chart of total sales for each order
+# for i, df in enumerate(dfs):
+#     plt.figure(figsize=(10,6))
+#     plt.bar(df['Order_ID'], df['Total_Sales'])
+#     plt.title(f'Total Sales for Each Order in DataFrame {i}')
+#     plt.xlabel('Order ID')
+#     plt.ylabel('Total Sales')
+#     plt.savefig(f'total_sales_{i}.png')
+
+# If you want to plot a chart of total sales for each region
+# for i, df in enumerate(dfs):
+#     plt.figure(figsize=(10,6))
+#     df.groupby('Region')['Total_Sales'].sum().plot(kind='bar')
+#     plt.title(f'Total Sales by Region in DataFrame {i}')
+#     plt.xlabel('Region')
+#     plt.ylabel('Total Sales')
+#     plt.savefig(f'total_sales_by_region_{i}.png')
+            ```
+            
+2026-02-09 22:28:32 [INFO] Executing Step 4: CachePopulation
+2026-02-09 22:28:32 [INFO] Executing Step 5: CodeCleaning
+2026-02-09 22:28:32 [INFO] Saving charts to C:\Users\kpras\OneDrive\Desktop\Stem Ramesh\Mini Project\MINI2\mini\project\exports\charts\temp_chart.png
+2026-02-09 22:28:32 [INFO] 
+Code running:
+```
+max_sales = max(df['Total_Sales'].max() for df in dfs)
+result = {'type': 'number', 'value': max_sales}
+        ```
+2026-02-09 22:28:32 [INFO] Executing Step 6: CodeExecution
+2026-02-09 22:28:32 [INFO] Executing Step 7: ResultValidation
+2026-02-09 22:28:32 [INFO] Answer: {'type': 'number', 'value': 1999.95}
+2026-02-09 22:28:32 [INFO] Executing Step 8: ResultParsing
+2026-02-09 22:28:32 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:32] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-09 22:28:32 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:32] "GET /?step=query HTTP/1.1" 200 -
+2026-02-09 22:28:32 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:32] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:28:32 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:32] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:28:36 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:36] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 22:28:36 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:36] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:28:36 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:36] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:28:58 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:58] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-09 22:28:58 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:58] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-09 22:28:58 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:58] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:28:58 [INFO] 127.0.0.1 - - [09/Feb/2026 22:28:58] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:29:04 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:04] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 22:29:04 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:04] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:29:04 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:04] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:29:07 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:07] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-09 22:29:07 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:07] "GET /?step=report HTTP/1.1" 200 -
+2026-02-09 22:29:07 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:07] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:29:07 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:07] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:29:12 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:12] "[32mPOST /session/reset HTTP/1.1[0m" 302 -
+2026-02-09 22:29:12 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:12] "GET / HTTP/1.1" 200 -
+2026-02-09 22:29:12 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:12] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:29:12 [INFO] 127.0.0.1 - - [09/Feb/2026 22:29:12] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:30:36 [INFO] 127.0.0.1 - - [09/Feb/2026 22:30:36] "GET / HTTP/1.1" 200 -
+2026-02-09 22:30:36 [INFO] 127.0.0.1 - - [09/Feb/2026 22:30:36] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:30:36 [INFO] 127.0.0.1 - - [09/Feb/2026 22:30:36] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-09 22:30:57 [INFO] 127.0.0.1 - - [09/Feb/2026 22:30:57] "GET / HTTP/1.1" 200 -
+2026-02-09 22:30:57 [INFO] 127.0.0.1 - - [09/Feb/2026 22:30:57] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-09 22:30:57 [INFO] 127.0.0.1 - - [09/Feb/2026 22:30:57] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-11 10:53:26 [INFO] Question: How many products were sold?
+2026-02-11 10:53:30 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2026-02-11 10:53:30 [INFO] Prompt ID: b93de48a-2ad4-4c71-ac6b-5a527970c688
+2026-02-11 10:53:30 [INFO] Executing Pipeline: GenerateChatPipeline
+2026-02-11 10:53:30 [INFO] Executing Step 0: ValidatePipelineInput
+2026-02-11 10:53:30 [INFO] Executing Step 1: CacheLookup
+2026-02-11 10:53:30 [INFO] Executing Step 2: PromptGeneration
+2026-02-11 10:53:31 [INFO] Using prompt: <dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1001,Charles Stewart,Electronics,Standing Desk,7,199.99,419.88,South,2024-01-23,Credit Card
+1004,Donna Baker,Office Supplies,Highlighters,5,19.99,479.94,East,2024-01-17,PayPal
+1026,Michelle Perez,Furniture,Calculator,4,329.99,1299.99,North,2024-02-19,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many products were sold?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2026-02-11 10:53:31 [INFO] Executing Step 3: CodeGenerator
+2026-02-11 10:53:32 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-11 10:53:32 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:40x10
+Order_ID,Customer_Name,Product_Category,Product_Name,Quantity,Unit_Price,Total_Sales,Region,Order_Date,Payment_Method
+1001,Charles Stewart,Electronics,Standing Desk,7,199.99,419.88,South,2024-01-23,Credit Card
+1004,Donna Baker,Office Supplies,Highlighters,5,19.99,479.94,East,2024-01-17,PayPal
+1026,Michelle Perez,Furniture,Calculator,4,329.99,1299.99,North,2024-02-19,Cash
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ How many products were sold?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2026-02-11 10:53:32 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+# Calculate the total number of products sold
+total_products_sold = dfs[0]['Quantity'].sum()
+
+# Declare result var: 
+result = {
+    "type": "number", 
+    "value": total_products_sold
+}
+            ```
+            
+2026-02-11 10:53:32 [INFO] Executing Step 4: CachePopulation
+2026-02-11 10:53:32 [INFO] Executing Step 5: CodeCleaning
+2026-02-11 10:53:32 [INFO] 
+Code running:
+```
+total_products_sold = dfs[0]['Quantity'].sum()
+result = {'type': 'number', 'value': total_products_sold}
+        ```
+2026-02-11 10:53:33 [INFO] Executing Step 6: CodeExecution
+2026-02-11 10:53:33 [INFO] Executing Step 7: ResultValidation
+2026-02-11 10:53:33 [INFO] Answer: {'type': 'number', 'value': 363}
+2026-02-11 10:53:33 [INFO] Executing Step 8: ResultParsing
+2026-02-11 10:53:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:33] "[32mPOST /query HTTP/1.1[0m" 302 -
+2026-02-11 10:53:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:33] "GET /?step=query HTTP/1.1" 200 -
+2026-02-11 10:53:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:33] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-11 10:53:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:33] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-11 10:53:56 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:56] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-11 10:53:56 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:56] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-11 10:53:56 [INFO] 127.0.0.1 - - [11/Feb/2026 10:53:56] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-11 10:54:21 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:21] "[32mPOST /visualize/auto HTTP/1.1[0m" 302 -
+2026-02-11 10:54:21 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:21] "GET /?step=visualize HTTP/1.1" 200 -
+2026-02-11 10:54:21 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:21] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-11 10:54:21 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:21] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-11 10:54:55 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:55] "GET /?step=report HTTP/1.1" 200 -
+2026-02-11 10:54:56 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:56] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-11 10:54:56 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:56] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-11 10:54:59 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:59] "[32mPOST /report HTTP/1.1[0m" 302 -
+2026-02-11 10:54:59 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:59] "GET /?step=report HTTP/1.1" 200 -
+2026-02-11 10:54:59 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:59] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-11 10:54:59 [INFO] 127.0.0.1 - - [11/Feb/2026 10:54:59] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -
+2026-02-11 10:55:14 [INFO] 127.0.0.1 - - [11/Feb/2026 10:55:14] "GET /api/reports/analysis_report_20260211_105458.pdf HTTP/1.1" 200 -
+2026-02-11 10:56:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:56:33] "[32mPOST /session/reset HTTP/1.1[0m" 302 -
+2026-02-11 10:56:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:56:33] "GET / HTTP/1.1" 200 -
+2026-02-11 10:56:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:56:33] "[36mGET /assets/styles.css HTTP/1.1[0m" 304 -
+2026-02-11 10:56:33 [INFO] 127.0.0.1 - - [11/Feb/2026 10:56:33] "[36mGET /assets/app.js HTTP/1.1[0m" 304 -

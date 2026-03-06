@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Analytics Console</title>
+    <link rel="stylesheet" href="{{ url_for('serve_asset', filename='styles.css') }}" />
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js" defer></script>
+    <script src="{{ url_for('serve_asset', filename='app.js') }}" defer></script>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <nav class="top-nav" aria-label="Primary">
+        <div class="brand">
+            <strong>AI Analytics Console</strong>
+            <span>Multi-agent autonomy</span>
+        </div>
+        <div class="top-nav__tabs" aria-label="Workflow navigation">
+            {% for tab in stage_tabs %}
+            <a class="stage-tab{% if current_step == tab.key %} active{% endif %}"
+               data-step-tab="{{ tab.key }}"
+               href="{{ url_for('serve_index', step=tab.key) }}">
+                {{ "%02d" % loop.index }} · {{ tab.label }}
+            </a>
+            {% endfor %}
+        </div>
+        <div class="top-nav__actions">
+            <form action="{{ url_for('reset_web_session') }}" method="post" id="primary-action-form">
+                <button type="submit" id="primary-action">Initialize Session</button>
+            </form>
+            <span class="session-status" id="session-status">Server session active</span>
+        </div>
+    </nav>
+
+    {% if flash_messages %}
+    <section class="flash-region">
+        {% for category, message in flash_messages %}
+        <div class="flash flash--{{ category }}">{{ message }}</div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
+    <header class="hero">
+        <div class="hero__content">
+            <p class="eyebrow">Multi-Agent Business Analyst</p>
+            <h1>Business Insights, Minus the Busywork</h1>
+            <p class="lede">
+                Upload messy spreadsheets, orchestrate AI agents, and ship narratives that make sense to humans.
+            </p>
+            <div class="hero__cta">
+                <p class="session-tip">Each step now renders server-side, so every action refreshes the narrative instantly.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="layout">
+        <aside class="status-panel">
+            <h2>Pipeline Telemetry</h2>
+            <div class="metrics" id="status-metrics">
+                <div class="metric-card">
+                    <span>Data Loaded</span>
+                    <strong>{{ 'Yes' if summary.has_data else 'No' }}</strong>
+                </div>
+                <div class="metric-card">
+                    <span>Rows</span>
+                    <strong>{{ '{:,}'.format(summary.rows) }}</strong>
+                </div>
+                <div class="metric-card">
+                    <span>Columns</span>
+                    <strong>{{ summary.columns }}</strong>
+                </div>
+                <div class="metric-card">
+                    <span>Cleaning Ops</span>
+                    <strong>{{ summary.cleaning_operations }}</strong>
+                </div>
+                <div class="metric-card">
+                    <span>Queries</span>
+                    <strong>{{ summary.queries_executed }}</strong>
+                </div>
+                <div class="metric-card">
+                    <span>Charts</span>
+                    <strong>{{ summary.charts_generated }}</strong>
+                </div>
+            </div>
+            <div class="history">
+                <div class="history__header">
+                    <h3>Query History</h3>
+                </div>
+                <ul id="history-list">
+                    {% if history %}
+                        {% for item in history %}
+                        <li>
+                            <strong>{{ item.query }}</strong>
+                            <p>{{ item.explanation }}</p>
+                            <small>{{ item.timestamp }}</small>
+                        </li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="muted">No questions asked yet.</li>
+                    {% endif %}
+                </ul>
+            </div>
+            <button class="ghost" type="button" id="reset-session">Reset session data</button>
+        </aside>
+
+        <section class="workspace">
+            <article class="card{% if current_step == 'upload' %} active-step{% endif %}" id="upload-card" data-step-card="upload">
+                <header>
+                    <h2>Upload Dataset</h2>
+                </header>
+                <form id="upload-form" action="{{ url_for('upload_step') }}" method="post" enctype="multipart/form-data">
+                    <label class="file-drop" for="data-file">
+                        <input type="file" id="data-file" name="file" accept=".csv,.xlsx,.xls" />
+                        <strong>Drop CSV/XLSX here or browse</strong>
+                        <p>Max 200 MB • Sales, Finance, HR, Marketing…</p>
+                    </label>
+                    <p id="selected-file" class="selected-file muted" aria-live="polite">
+                        {% if file_info.filename %}
+                            {{ file_info.filename }} • {{ '%.2f'|format(file_info.size_mb or 0) }} MB
+                        {% else %}
+                            No file selected yet.
+                        {% endif %}
+                    </p>
+                    <button type="submit">Ingest &amp; profile</button>
+                </form>
+                {% set preview_rows = dataset_preview.head or [] %}
+                {% set preview_columns = dataset_preview.columns or [] %}
+                <div class="preview" id="dataset-preview">
+                    {% if preview_rows %}
+                    <h3>{{ preview_rows|length }} sample rows • {{ preview_columns|length }} columns</h3>
+                    <div class="scroll-block">
+                        <strong>Columns</strong>
+                        <ul>
+                            {% for col in preview_columns %}
+                            <li>
+                                <span>{{ col.name }}</span>
+                                <small>{{ col.dtype }}</small>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="scroll-block table-block">
+                        <strong>Sample Rows</strong>
+                        {% set first_row = preview_rows[0] if preview_rows else {} %}
+                        <table>
+                            <thead>
+                                <tr>
+                                    {% for col_name in first_row.keys() %}
+                                    <th>{{ col_name }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in preview_rows %}
+                                <tr>
+                                    {% for value in row.values() %}
+                                    <td>{{ value }}</td>
+                                    {% endfor %}
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <p class="muted">Upload a dataset to preview structure and quality.</p>
+                    {% endif %}
+                </div>
+                <a class="next-btn" data-next-step="clean" href="{{ url_for('serve_index', step='clean') }}">Next: Clean Data →</a>
+            </article>
+
+            <article class="card{% if current_step == 'clean' %} active-step{% endif %}" id="clean-card" data-step-card="clean">
+                <header>
+                    <h2>Clean Data</h2>
+                </header>
+                <div class="notice" id="cleaning-needs">
+                    {% if cleaning_needs.has_data %}
+                        <p><strong>Missing columns:</strong> {{ cleaning_needs.missing_by_column|length }}</p>
+                        <p><strong>Duplicate rows:</strong> {{ cleaning_needs.duplicate_count }}</p>
+                    {% else %}
+                        Load a dataset to detect issues.
+                    {% endif %}
+                </div>
+                <form id="clean-form" action="{{ url_for('clean_step') }}" method="post">
+                    <div class="field-group">
+                        <label>
+                            <span>Missing value strategy</span>
+                            <select name="missing_strategy" id="missing-strategy">
+                                <option value="mean">Mean</option>
+                                <option value="median">Median</option>
+                                <option value="mode">Mode</option>
+                                <option value="ffill">Forward fill</option>
+                                <option value="bfill">Backward fill</option>
+                                <option value="drop">Drop rows</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Columns (comma separated)</span>
+                            <input type="text" name="missing_columns" id="missing-columns" placeholder="Leave blank for all" />
+                        </label>
+                    </div>
+                    <label class="checkbox">
+                        <input type="checkbox" name="handle_duplicates" id="handle-duplicates" checked />
+                        <span>Handle duplicate rows (drop)</span>
+                    </label>
+                    <button type="submit">Execute cleaning</button>
+                </form>
+                <div class="preview" id="cleaning-summary">
+                    {% if cleaning_summary %}
+                        <p><strong>Rows removed:</strong> {{ cleaning_summary.rows_removed }}</p>
+                        <p><strong>Missing values:</strong> {{ cleaning_summary.missing_before }} → {{ cleaning_summary.missing_after }}</p>
+                        <p><strong>Final rows:</strong> {{ cleaning_summary.final_rows }}</p>
+                    {% else %}
+                        <p class="muted">Run cleaning to see a summary.</p>
+                    {% endif %}
+                </div>
+                <a class="next-btn" data-next-step="query" href="{{ url_for('serve_index', step='query') }}">Next: Ask Questions →</a>
+            </article>
+
+            <article class="card{% if current_step == 'query' %} active-step{% endif %}" id="question-card" data-step-card="query">
+                <header>
+                    <h2>Ask Questions</h2>
+                </header>
+                <form id="query-form" action="{{ url_for('query_step') }}" method="post">
+                    <textarea id="query-input" name="query" placeholder="e.g., Show total revenue by region"></textarea>
+                    <div class="actions">
+                        <button type="submit">Run NLQ</button>
+                    </div>
+                </form>
+                <div class="preview" id="query-result">
+                    {% if query_result.result %}
+                        <p>{{ query_result.explanation }}</p>
+                        {% set payload = query_result.result %}
+                        {% if payload.type == 'dataframe' %}
+                            <div class="scroll-block table-block">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            {% for col in payload.columns %}
+                                            <th>{{ col }}</th>
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in payload.data %}
+                                        <tr>
+                                            {% for col in payload.columns %}
+                                            <td>{{ row[col] }}</td>
+                                            {% endfor %}
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        {% elif payload.type == 'series' %}
+                            <ul>
+                                {% for key, value in payload.data.items() %}
+                                <li>{{ key }}: {{ value }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="highlight">{{ payload.data }}</p>
+                        {% endif %}
+                    {% else %}
+                        <p class="muted">Run a question to see results here.</p>
+                    {% endif %}
+                </div>
+                <a class="next-btn" data-next-step="visualize" href="{{ url_for('serve_index', step='visualize') }}">Next: Visualize →</a>
+            </article>
+
+            <article class="card{% if current_step == 'visualize' %} active-step{% endif %}" id="viz-card" data-step-card="visualize">
+                <header>
+                    <h2>Visualize</h2>
+                </header>
+                <div class="viz-actions">
+                    <form action="{{ url_for('auto_visualize_step') }}" method="post" id="auto-viz-form">
+                        <button type="submit" id="auto-viz">Auto-generate</button>
+                    </form>
+                    <form action="{{ url_for('custom_visualize_step') }}" method="post" id="custom-viz-form">
+                        <label for="chart-type" class="sr-only">Chart type</label>
+                        <select id="chart-type" name="chart_type" aria-label="Chart type">
+                            <option value="bar">Bar</option>
+                            <option value="line">Line</option>
+                            <option value="pie">Pie</option>
+                            <option value="histogram">Histogram</option>
+                            <option value="scatter">Scatter</option>
+                            <option value="box">Box</option>
+                            <option value="heatmap">Heatmap</option>
+                        </select>
+                        <input type="text" id="x-col" name="x_col" placeholder="X column" />
+                        <input type="text" id="y-col" name="y_col" placeholder="Y column (optional)" />
+                        <button type="submit">Craft chart</button>
+                    </form>
+                </div>
+                <div class="chart-grid" id="chart-gallery">
+                    {% if chart_payloads %}
+                        {% for chart in chart_payloads %}
+                        <div class="chart-card">
+                            <h4>{{ chart.title }}</h4>
+                            <div id="chart-{{ loop.index }}"></div>
+                            <script>
+                                (function() {
+                                    const render = function() {
+                                        const figure = {{ chart.figure_json|safe }};
+                                        Plotly.newPlot('chart-{{ loop.index }}', figure.data || [], figure.layout || {}, {displayModeBar: false});
+                                    };
+                                    if (document.readyState === 'loading') {
+                                        document.addEventListener('DOMContentLoaded', render);
+                                    } else {
+                                        render();
+                                    }
+                                })();
+                            </script>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="muted">No visualizations yet.</p>
+                    {% endif %}
+                </div>
+                <a class="next-btn" data-next-step="report" href="{{ url_for('serve_index', step='report') }}">Next: Generate Report →</a>
+            </article>
+
+            <article class="card{% if current_step == 'report' %} active-step{% endif %}" id="report-card" data-step-card="report">
+                <header>
+                    <h2>Generate Report</h2>
+                </header>
+                <p>Compile cleaning logs, NLQ answers, and charts into a single PDF artifact.</p>
+                <form action="{{ url_for('report_step') }}" method="post" id="report-form">
+                    <button type="submit" id="generate-report">Build PDF dossier</button>
+                </form>
+                <div class="preview" id="report-status">
+                    {% if report_status.filename %}
+                        <p>Report ready: {{ report_status.filename }} ({{ report_status.generated_at }})</p>
+                        <a href="{{ url_for('download_report', filename=report_status.filename) }}" target="_blank">Download latest report</a>
+                    {% else %}
+                        <p class="muted">Generate a report to download it here.</p>
+                    {% endif %}
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Core Framework
+Flask==3.0.2
+Flask-Cors==4.0.0
+python-dotenv==1.0.0
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.3
+openpyxl==3.1.2
+xlrd==2.0.1
+
+# AI/ML Libraries
+langchain==0.1.7
+langchain-groq==0.0.1
+groq==0.4.2
+pandasai==1.5.17
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.1
+plotly==5.18.0
+kaleido==0.2.1
+
+# PDF Generation
+reportlab==4.0.9
+fpdf2==2.7.7
+Pillow==10.2.0
+
+# Utilities
+requests==2.31.0
+validators==0.22.0
+python-dateutil==2.8.2
