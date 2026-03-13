@@ -1,22 +1,22 @@
-# 🚀 AI-Powered Multi-Agent Business Data Analysis System
+# AI-Powered Multi-Agent Business Data Analysis System
 
 A complete end-to-end natural language business analytics platform built with Flask, vanilla HTML/CSS/JS, and Groq LLM.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.1-blue)
 ![Python](https://img.shields.io/badge/python-3.10+-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
 
-## 📋 Overview
+## Overview
 
 This system allows users to:
-- ✅ Upload CSV or Excel datasets (up to 200 MB)
-- ✅ Automatically clean and validate data
-- ✅ Ask questions in natural language (no coding required)
-- ✅ Get instant analytical insights
-- ✅ Generate automatic visualizations
-- ✅ Download comprehensive PDF reports
+- Upload CSV or Excel datasets (up to 200 MB)
+- Automatically clean and validate data
+- Ask questions in natural language (no coding required)
+- Get instant analytical insights
+- Generate automatic visualizations
+- Download comprehensive PDF reports
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Sequential Multi-Agent System
 
@@ -33,37 +33,37 @@ This system allows users to:
 
 ### Agent Responsibilities
 
-1. **Input Agent** 🔵
+1. **Input Agent** 
    - File validation (CSV, Excel)
    - Data loading
    - Metadata extraction
    - Issue detection
 
-2. **Cleaning Agent** 🟢
+2. **Cleaning Agent** 
    - Interactive missing value handling
    - Duplicate removal
    - User-driven cleaning decisions
    - Operation logging
 
-3. **NLQ Agent** 🟡
+3. **NLQ Agent** 
    - Natural language understanding
    - Query to Pandas conversion
    - LLM-powered reasoning (Groq)
    - PandasAI integration
 
-4. **Visualization Agent** 🟣
+4. **Visualization Agent** 
    - Auto chart selection
    - Multiple chart types (bar, line, pie, scatter, etc.)
    - Matplotlib & Plotly support
    - Interactive visualizations
 
-5. **Report Agent** 🔴
+5. **Report Agent** 
    - PDF generation
    - Comprehensive summary
    - Chart embedding
    - Professional formatting
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -74,7 +74,7 @@ This system allows users to:
 | **PDF Generation** | ReportLab |
 | **API** | Groq API (Mixtral-8x7b) |
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -121,7 +121,7 @@ python app.py
 
 Then open `http://localhost:8000` to load the HTML/CSS/JS interface. The Flask server also exposes REST endpoints under `/api/*`.
 
-## 🎯 Usage Guide
+## Usage Guide
 
 ### Step 1: Upload Data
 - Click "Browse files" or drag-and-drop
@@ -166,7 +166,7 @@ Natural language query examples:
   - Key insights
 - Download as PDF
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ai-business-analytics/
@@ -205,7 +205,7 @@ ai-business-analytics/
     └── API_REFERENCE.md
 ```
 
-## 🔧 Configuration
+## Configuration
 
 Key settings in `utils/config.py`:
 
@@ -221,14 +221,14 @@ ALLOWED_EXTENSIONS = ['.csv', '.xlsx', '.xls']
 CHART_TYPES = ['bar', 'line', 'pie', 'histogram', 'scatter', 'box', 'heatmap']
 ```
 
-## 📊 Sample Data
+## Sample Data
 
 Included sample dataset: `sample_data/sales_data.csv`
 - 40 sample orders
 - Columns: Order_ID, Customer_Name, Product_Category, Total_Sales, Region, etc.
 - Perfect for testing all features
 
-## 🧪 Testing the System
+## Testing the System
 
 1. **Load Sample Data**
    - Navigate to Step 1
@@ -254,7 +254,7 @@ Included sample dataset: `sample_data/sales_data.csv`
    - Generate PDF
    - Download and review
 
-## 🎓 Viva/Presentation Points
+## Viva/Presentation Points
 
 ### Architecture Overview
 - Sequential multi-agent design
@@ -284,7 +284,7 @@ Included sample dataset: `sample_data/sales_data.csv`
 5. Viz Agent creates charts
 6. Report Agent exports PDF
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -308,7 +308,7 @@ Solution: Check file size (<200MB) and format (CSV/Excel)
 Solution: Rephrase query, ensure data is loaded and cleaned
 ```
 
-## 📝 Future Enhancements
+## Future Enhancements
 
 - [ ] Database connectivity (PostgreSQL, MySQL)
 - [ ] Real-time streaming data support
@@ -319,22 +319,22 @@ Solution: Rephrase query, ensure data is loaded and cleaned
 - [ ] Email report delivery
 - [ ] Scheduled automated reports
 
-## 👥 Contributing
+## Contributing
 
 This is an educational project. Feel free to fork and enhance!
 
-## 📄 License
+## License
 
 MIT License - Free for educational and commercial use
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Groq**: For fast LLM inference
 - **Flask**: For lightweight backend routing
 - **LangChain**: For LLM orchestration
 - **PandasAI**: For NL to Pandas conversion
 
-## 📧 Support
+## Support
 
 For questions or issues:
 1. Check the documentation
@@ -344,6 +344,7 @@ For questions or issues:
 
 ---
 
-**Built with ❤️ using AI Multi-Agent Architecture**
 
-*Version 1.0.0 | Last Updated: February 2026*
+
+*Version 1.0.1 | Last Updated: March 2026*
+
